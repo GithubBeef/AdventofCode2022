@@ -1,10 +1,15 @@
 #include <iostream>
+#include <fstream>
+
 using namespace std;
 
-int totalScore = 0;
+
 int main() {
-  char opp, self;
-  while(cin >> opp >> self){
+
+    int totalScore = 0;
+    char opp, self;
+    ifstream fin("input.txt");
+  while(fin >> opp >> self){
     int round = 0;
     if (self =='X'){
       round += 1;
@@ -35,3 +40,5 @@ int main() {
     
   return 0;
 }
+
+
